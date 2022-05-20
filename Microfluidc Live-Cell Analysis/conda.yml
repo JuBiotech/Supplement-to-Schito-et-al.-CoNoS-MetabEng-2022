@@ -1,0 +1,22 @@
+name: conos-analysis
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8.5
+  - pip=21.2.4
+  - cudatoolkit=10.2
+  - pytorch=1.9.0
+  - git=2.33.1
+  #- _libgcc_mutex=0.1=main
+  #- blas=1.0=mkl
+  - pip:
+    - -r requirements.txt
+    - "--editable=git+https://github.com/MouseLand/cellpose.git@v0.7.3#egg=cellpose[omni]"
+    #- cellpose==0.6.5
+    # brand new cellpose dependency (you should not do this due to reproducibility/stability issues)
+    #- opencv-python-headless==4.5.4.58
+    #- torch==1.10.0
+    #- scikit-image==0.18.3
+    #- imageio==2.10.1

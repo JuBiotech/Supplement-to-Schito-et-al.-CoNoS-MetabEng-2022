@@ -1,0 +1,8 @@
+pillow>=8.4.0
+mlflow
+matplotlib==3.5.1
+tqdm
+scikit-learn
+tifffile
+shapely>=1.8.0
+opencv-python==4.5.5.62
